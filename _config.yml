@@ -52,3 +52,5 @@ resume_theme:                   default
 
 # pdf: true
 # pdf_layout: resume
+
+theme: jekyll-theme-minimal

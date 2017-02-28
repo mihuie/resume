@@ -1,0 +1,12 @@
+DOWNLOADED = wkhtmltox.pkg
+BINARY = $(TMPDIR)/bin/wkhtmltopdf
+
+pkg_content = $(TMPDIR)/content
+payload = $(pkg_content)/Payload
+app_tar_xz = $(TMPDIR)/usr/local/share/wkhtmltox-installer/app.tar.xz
+
+unpack: tmp $(DOWNLOADED)
+	pkgutil --expand $(DOWNLOADED) $(pkg_content)
+	tar -xf $(payload) -C $(TMPDIR)
+	tar -xzf $(app_tar_xz) -C $(TMPDIR)
+
